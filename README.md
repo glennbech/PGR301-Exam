@@ -1,7 +1,7 @@
 # DevOps med gode intensjoner
 
 <details>
-  <summary>Oppgave</summary>
+  <summary>Info</summary>
 
 ## Krav til leveransen
 
