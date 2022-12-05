@@ -1,5 +1,8 @@
 # DevOps med gode intensjoner
 
+<details>
+  <summary>Oppgave</summary>
+
 ## Krav til leveransen
 
 * Eksamensoppgaven er gitt på GitHub repository ; https://github.com/PGR301-2022/eksamen_2022
@@ -269,6 +272,8 @@ Du kan få en oversikt over alle aktive handlekurver med dette endepunktet.
 curl --location --request GET 'http://localhost:8080/carts' \
 --header 'Content-Type: application/json'
 ```
+
+</details>
 
 ## Del 1 DevOps-prinsipper
 
