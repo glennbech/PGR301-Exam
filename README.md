@@ -1,6 +1,27 @@
 # DevOps med gode intensjoner
 
 <details>
+  <summary>Oppgave svar</summary>
+
+## Oppgave 1
+
+## Oppgave 2
+
+### Deloppgave 3
+
+For å opprette *branch protection* og *status check* på main må man:
+* Gå til Settings -> Branches (Under *Code and automation*).
+* Under *Branch Protection Rules* legg til ny regel (*Add rule*).
+* Det er viktig at *Branch name pattern* heter det samme som head-branch. F.eks *main* eller *master*.
+* For å sette opp pull request med minst en godkjenning, må man huke av *Require a pull request before merging*.
+* Det er viktig at *Require approvals* også er checked og at *Required number of approvals before merging* er 1 eller flere.
+* For status bekreftelse og at koden er verifisert av GitHub Actions må man checke av *Require status checks to pass before merging*,
+  og søke etter *build* under *Status checks that are required*.
+* Til slutt velger man *Do not allow bypassing the above settings* og lagrer.
+
+</details>
+
+<details>
   <summary>Info</summary>
 
 ## Krav til leveransen
