@@ -296,9 +296,10 @@ Problemet er at utviklingsteamet må starte jobben manuelt fra GitHub actions br
 Du kan gjerne teste dette selv ved å gå til "Actions" i ditt repository, du vil se teksten "This workflow has a workflow_dispatch event trigger." Og vil
 ha et valg som heter "Run workflow"
 
-<span style="color:green">### Oppgave 1</span> 
+### <span style="color:green">Oppgave 1 
 
 * Start med å få workflowen til å kjøre når det lages en pull request, og på hver push til main branch
+  </span>
 
 ### Oppgave 2 
 
