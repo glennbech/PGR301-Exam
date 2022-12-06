@@ -2,11 +2,7 @@
 # Also, I can't get it to run automatically - it can only be triggered from the UI. Shouldn't it run on every commit
 # or something?
 name: CI pipeline
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [ push, pull_request ]
 
 jobs:
   build:
