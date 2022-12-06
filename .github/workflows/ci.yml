@@ -6,6 +6,9 @@ on: [ push, pull_request ]
 
 jobs:
   build:
+    timeout-minutes: 2
+
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
