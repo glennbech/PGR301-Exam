@@ -1,6 +1,36 @@
 # DevOps med gode intensjoner
 
 <details>
+  <summary>Oppgave svar</summary>
+
+## Oppgave 1
+
+## Oppgave 2
+
+### Deloppgave 3
+
+For å opprette *branch protection* og *status check* på main må man:
+* Gå til Settings -> Branches (Under *Code and automation*).
+* Under *Branch Protection Rules* legg til ny regel (*Add rule*).
+* Det er viktig at *Branch name pattern* heter det samme som head-branch. F.eks *main* eller *master*.
+* For å sette opp pull request med minst en godkjenning, må man huke av *Require a pull request before merging*.
+* Det er viktig at *Require approvals* også er checked og at *Required number of approvals before merging* er 1 eller flere.
+* For status bekreftelse og at koden er verifisert av GitHub Actions må man checke av *Require status checks to pass before merging*,
+  og søke etter *build* under *Status checks that are required*.
+* Til slutt velger man *Do not allow bypassing the above settings* og lagrer.
+
+## Oppgave 3
+
+### Deloppgave 1
+
+I filen `docker.yml` under `jobs.builds.steps` med *name: Login to Docker Hub* er docker hub brukernavn og passord satt som "secrets".
+Dette er for at ingen andre skal kunne se din private informasjon. Derfor under Settings -> Secrets -> Actions i GitHub må man legge til to
+nye *Repository secrets*. Navnet må matche det navnet som står etter "secrets" i docker.yml filen. Passordet skal være en Docker Hub access token.
+For å få denne, må man gå til https://hub.docker.com/settings/security og legge til en ny *Access Token*.
+
+</details>
+
+<details>
   <summary>Info</summary>
 
 ## Krav til leveransen
