@@ -399,7 +399,7 @@ Vi kan få bedre kontroll på byggeprosessen ved også å gjøre maven bygget i 
 * Skriv om Dockerfilen. til bruke en *Multi Stage Build*. 
 * Du må også rydde opp i ```docker.yml``` workflow filen... Fjern ønødvendige "steps".
 
-### Oppave 3
+### Oppave 3 - DONE
 
 Gaffel consulting var ikke klar over at det var en dårlig idè å ha sitt container image i et offentlig Docker hub repository - og Shopifly har allerede sett at flere hundre har lastet ned deres container image.
 Et privat ECR repository i AWS er en bedre løsning.
