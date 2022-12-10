@@ -25,8 +25,8 @@ For å opprette *branch protection* og *status check* på main må man:
 
 I filen `docker.yml` under `jobs.builds.steps` med *name: Login to Docker Hub* er docker hub brukernavn og passord satt som "secrets".
 Dette er for at ingen andre skal kunne se din private informasjon. Derfor under Settings -> Secrets -> Actions i GitHub må man legge til to
-nye *Repository secrets*. Navnet må matche det navnet som står etter "secrets" i docker.yml filen. Passordet skal være en Docker Hub access token.
-For å få denne, må man gå til https://hub.docker.com/settings/security og legge til en ny *Access Token*.
+nye *Repository secrets*. Uten disse, klarer ikke workflowen å kjøre og den vil feile. Navnet må matche det navnet som står etter "secrets" i docker.yml filen. 
+Passordet skal være en Docker Hub access token. For å få denne, må man gå til https://hub.docker.com/settings/security og legge til en ny *Access Token*.
 
 ### Oppgave 3
 
