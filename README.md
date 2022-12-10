@@ -3,11 +3,11 @@
 <details>
   <summary>Oppgave svar</summary>
 
-## Oppgave 1
+## Del 1
 
-## Oppgave 2
+## Del 2
 
-### Deloppgave 3
+### Oppgave 3
 
 For å opprette *branch protection* og *status check* på main må man:
 * Gå til Settings -> Branches (Under *Code and automation*).
@@ -19,9 +19,9 @@ For å opprette *branch protection* og *status check* på main må man:
   og søke etter *build* under *Status checks that are required*.
 * Til slutt velger man *Do not allow bypassing the above settings* og lagrer.
 
-## Oppgave 3
+## Del 3
 
-### Deloppgave 1
+### Oppgave 1
 
 I filen `docker.yml` under `jobs.builds.steps` med *name: Login to Docker Hub* er docker hub brukernavn og passord satt som "secrets".
 Dette er for at ingen andre skal kunne se din private informasjon. Derfor under Settings -> Secrets -> Actions i GitHub må man legge til to
