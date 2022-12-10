@@ -21,16 +21,19 @@ jobs:
         # Jim; Just skipping test for now
         run: mvn -B package -DskipTests --file pom.xml
 
-      - name: Login to Docker Hub
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_TOKEN }}
-
-      - name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          file: ./Dockerfile
-          push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/shopifly:latest
+    push_to_registry:
+      name: Push Docker image to ECR
+      runs-on: ubuntu-latest
+      steps:
+        - name: Check out the repo
+          uses: actions/checkout@v2
+  
+        - name: Build and push Docker image
+          env:
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          run: |
+            aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 244530008913.dkr.ecr.eu-west-1.amazonaws.com
+            docker build . -t docker-image
+            docker tag docker-image 244530008913.dkr.ecr.eu-west-1.amazonaws.com/1043
+            docker push 244530008913.dkr.ecr.eu-west-1.amazonaws.com/1043
