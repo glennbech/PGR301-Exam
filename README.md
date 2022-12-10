@@ -28,6 +28,15 @@ Dette er for at ingen andre skal kunne se din private informasjon. Derfor under 
 nye *Repository secrets*. Navnet må matche det navnet som står etter "secrets" i docker.yml filen. Passordet skal være en Docker Hub access token.
 For å få denne, må man gå til https://hub.docker.com/settings/security og legge til en ny *Access Token*.
 
+### Oppgave 3
+
+I `docker.yml` skal man autentisere docker mot AWS ECR. For å få til dette, bruker man en ID og en KEY. Disse oppretter man i AWS.
+
+* Først søker man etter "IAM" i AWS.
+* Under "Quick Links" på høyre side finner man "My security credentials".
+* Under "Access keys for CLI, SDK, & API access" kan man velge å lage en access key.
+* Gå til Settings -> Secrets -> Actions i GitHub og legg til ID og secret KEY. Bruk navnene som står etter "secrets" i `docker.yml`.
+
 </details>
 
 <details>
