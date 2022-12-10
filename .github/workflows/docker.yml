@@ -5,11 +5,11 @@ on:
   pull_request:
     branches: [ main ]
 jobs:
-  build:
-  timeout-minutes: 2
+  push_to_registry:
+    timeout-minutes: 2
+    name: Push Docker image to ECR
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - name: Check out the repo
         uses: actions/checkout@v2
 
