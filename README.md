@@ -326,11 +326,11 @@ Problemet er at utviklingsteamet må starte jobben manuelt fra GitHub actions br
 Du kan gjerne teste dette selv ved å gå til "Actions" i ditt repository, du vil se teksten "This workflow has a workflow_dispatch event trigger." Og vil
 ha et valg som heter "Run workflow"
 
-### Oppgave 1
+### Oppgave 1 - DONE
 
 * Start med å få workflowen til å kjøre når det lages en pull request, og på hver push til main branch
 
-### Oppgave 2 
+### Oppgave 2 - DONE
 
 Det er andre utfordringer med denne flyten også; Workflowen kjører "ok" selv om det åpenbart er unit-testfeil i koden. 
 
@@ -338,7 +338,7 @@ Det er andre utfordringer med denne flyten også; Workflowen kjører "ok" selv o
 * Rett deretter enhetstesten og se at pipeline kjører "ok".  
 * Workflowen skal kompilere javakoden og kjøre enhetstester på hver eneste push, *uavhengig av branch* 
 
-### Oppgave 3 
+### Oppgave 3 - DONE
 
 Branch protection og status sjekker - Beskriv hva sensor må gjøre for å konfigurere sin fork på en slik måte
 at
@@ -353,11 +353,11 @@ Applikasjonen er laget for å pushe et container image til Docker Hub.
 
 Det ligger en ```Dockerfile``` i prosjektet, og en workflow fil som heter ```docker.yml``` .
 
-### Oppgave 1
+### Oppgave 1 - DONE
 
 Beskriv hva du må gjøre for å få workflow til å fungere med din DockerHub konto? Hvorfor feiler workflowen? 
 
-### Oppgave 2
+### Oppgave 2 - DONE
 
 Når du har fikset problemet i oppgave 1, og du forøker å kjøre applikasjonen fra Docker hub med for eksempel; 
 ```docker run <dockerhub brukeravn>/shopifly```
