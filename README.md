@@ -41,7 +41,7 @@ I `docker.yml` skal man autentisere docker mot AWS ECR. For å få til dette, br
 
 ### Oppgave 1
 
-`provider.tf` mangler backend "s3".
+`provider.tf` mangler backend "s3". `cloudwatch_dashboard.yml` hadde feil candidate info.
 
 </details>
 
