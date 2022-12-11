@@ -16,7 +16,7 @@ resource "aws_cloudwatch_dashboard" "main" {
             "carts.value"
           ]
         ],
-        "period": 300,
+        "period": 60,
         "stat": "Maximum",
         "region": "eu-west-1",
         "title": "Total number of carts"
