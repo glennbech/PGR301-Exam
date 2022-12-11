@@ -5,5 +5,9 @@ terraform {
       version = "4.40.0"
     }
   }
-
+  backend "s3" {
+    bucket = "onlinestore"
+    key    = "1043/terraform-in-pipeline.state"
+    region = "eu-north-1"
+  }
 }
