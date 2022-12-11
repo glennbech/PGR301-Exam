@@ -7,14 +7,10 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @RestController()
 public class ShoppingCartController implements ApplicationListener<ApplicationReadyEvent> {
-
-    private final Map<String, Cart> carts = new HashMap<>();
 
     private MeterRegistry meterRegistry;
 
@@ -42,9 +38,7 @@ public class ShoppingCartController implements ApplicationListener<ApplicationRe
      */
     @PostMapping(path = "/cart/checkout")
     public String checkout(@RequestBody Cart cart) {
-        String checkout = cartService.checkout(cart);
-        carts.remove(cart.getId());
-        return checkout;
+        return cartService.checkout(cart);
     }
 
     /**
@@ -55,9 +49,7 @@ public class ShoppingCartController implements ApplicationListener<ApplicationRe
      */
     @PostMapping(path = "/cart")
     public Cart updateCart(@RequestBody Cart cart) {
-        Cart updatedCart = cartService.update(cart);
-        carts.put(cart.getId(), cart);
-        return updatedCart;
+        return cartService.update(cart);
     }
 
     /**
@@ -72,6 +64,7 @@ public class ShoppingCartController implements ApplicationListener<ApplicationRe
 
     @Override
     public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
-        Gauge.builder("carts", carts, c -> c.values().size()).register(meterRegistry);
+        Gauge.builder("carts", cartService, c -> c.getAllsCarts().size()).register(meterRegistry);
+        Gauge.builder("cartsvalue", cartService, CartService::total).register(meterRegistry);
     }
 }
