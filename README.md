@@ -41,7 +41,9 @@ I `docker.yml` skal man autentisere docker mot AWS ECR. For å få til dette, br
 
 ### Oppgave 1
 
-`provider.tf` mangler backend "s3". `cloudwatch_dashboard.yml` hadde feil candidate info.
+`provider.tf` mangler en 'backend'-blokk som spesifiserer hvor tilstanden til terraform-konfigurasjonen skal lagres. Denne skal lagres
+i en 'S3'-bucket. Uten denne .state-filen vet ikke terraform noe om infrastruktur-tilstanden.
+
 
 </details>
 
