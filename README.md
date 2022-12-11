@@ -476,7 +476,7 @@ på når det lages en Pull request
 * Totalt antall  handlevogner er blitt "sjekket ut" per time
 * Gjennomsnittlig responstid for Checkout metoden i Controller-klassen.
 
-### Alarmer
+### Alarmer - DONE
 
 Lag Terraform-kode som oppretter
 
