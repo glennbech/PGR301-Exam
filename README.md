@@ -460,7 +460,7 @@ Se på ```provider.tf filen```.
 * Gjør nødvendige Endre slik denne slik at Terraform kan kjøres flere ganger uten å forsøke å opprette ressurser hver gang den kjører.
 * Fjern kommentarene fra ```databacket.tf``` slik at Terraform-koden  også lager en S3 bucket. 
 
-### Oppgave 2
+### Oppgave 2 - DONE
 
 Et annet problem er at "terraform apply" bare blir kjørt hver gang noen lager en Pull request. Vi ønsker bare å kjøre apply når
 noen gjør en push mot main branch. 
