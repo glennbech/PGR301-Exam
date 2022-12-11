@@ -7,6 +7,19 @@
 
 ## Del 2
 
+### Oppgave 1 / 2
+
+Når det står:
+`Start med å få workflowen til å kjøre når det lages en pull request, og på hver push til main branch`
+var jeg usikker på om det var ment at pull request er uavhengig av branch, mens push er kun på main.
+Eller om det er ment som at pull og push skal skje kun på main. Derfor har jeg tatt utgangspunkt i det første.
+Kun push på main, mens pull fra alle branches.
+
+Når det så videre står:
+`Workflowen skal kompilere javakoden og kjøre enhetstester på hver eneste push, uavhengig av branch`
+har jeg fortsatt tatt utgangspunkt i at pull allerede skjer på alle branches, så derfor kan både push og pull skje
+uavhengig av branch.
+
 ### Oppgave 3
 
 For å opprette *branch protection* og *status check* på main må man:
@@ -42,7 +55,16 @@ I `docker.yml` skal man autentisere docker mot AWS ECR. For å få til dette, br
 ### Oppgave 1
 
 `provider.tf` mangler en 'backend'-blokk som spesifiserer hvor tilstanden til terraform-konfigurasjonen skal lagres. Denne skal lagres
-i en 'S3'-bucket. Uten denne .state-filen vet ikke terraform noe om infrastruktur-tilstanden.
+i en 'S3'-bucket. Uten denne .state-filen, vet ikke terraform noe om infrastruktur-tilstanden.
+
+### Oppgave 2
+
+Når det står:
+`Fullfør workflow filen cloudwatch_dashboard.yml filen slik at apply bare bli kjørt på push mot main branch, og terraform plan
+på når det lages en Pull request`
+tar jeg utgangspunkt i at apply kun kjøres på main, mens plan kjøres uavhengig av branch etter som det ikke står 'pull request
+mot main branch'.
+
 
 </details>
 
