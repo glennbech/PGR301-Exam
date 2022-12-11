@@ -74,7 +74,7 @@ resource "aws_cloudwatch_dashboard" "main" {
           ]
         ],
         "period": 60,
-        "stat": "Maximum",
+        "stat": "Average",
         "region": "eu-west-1",
         "title": "Gjennomsnittlig responstid for Checkout"
       }
