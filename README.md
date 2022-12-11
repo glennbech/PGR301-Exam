@@ -5,6 +5,10 @@
 
 ## Del 1
 
+### Utfordringer med Shopifly
+Dagens systemutviklingsprosess har flere utfordringer som fører til brudd på DevOps prinsipper som *flow* vet å
+ha manuelle steg. 
+
 ## Del 2
 
 ### Oppgave 1 / 2
@@ -475,7 +479,7 @@ Your previous request to create the named bucket succeeded and you already own i
 
 De kommenterte derfor bare ut S3 bucket koden, og gikk videre til neste oppgave. 
 
-### Oppgave 1 
+### Oppgave 1 - DONE
 
 Se på ```provider.tf filen```. 
 
