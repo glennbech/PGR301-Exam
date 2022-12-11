@@ -76,7 +76,7 @@ resource "aws_cloudwatch_dashboard" "main" {
             "class", "no.shoppifly.ShoppingCartController"
           ]
         ],
-        "period": 300,
+        "period": 3600,
         "stat": "Average",
         "region": "eu-west-1",
         "title": "Gjennomsnittlig responstid for Checkout"
