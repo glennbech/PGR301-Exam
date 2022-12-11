@@ -16,7 +16,7 @@ resource "aws_cloudwatch_dashboard" "main" {
             "carts.value"
           ]
         ],
-        "period": 60,
+        "period": 300,
         "stat": "Maximum",
         "region": "eu-west-1",
         "title": "Antall handlekurver"
@@ -35,7 +35,7 @@ resource "aws_cloudwatch_dashboard" "main" {
             "cartsvalue.value"
           ]
         ],
-        "period": 60,
+        "period": 300,
         "stat": "Maximum",
         "region": "eu-west-1",
         "title": "Total sum med penger i handlekurver"
@@ -54,7 +54,7 @@ resource "aws_cloudwatch_dashboard" "main" {
             "checkouts.count"
           ]
         ],
-        "period": 60,
+        "period": 3600,
         "stat": "Maximum",
         "region": "eu-west-1",
         "title": "Totalt antall handlevogner sjekket ut"
@@ -76,7 +76,7 @@ resource "aws_cloudwatch_dashboard" "main" {
             "class", "no.shoppifly.ShoppingCartController"
           ]
         ],
-        "period": 60,
+        "period": 300,
         "stat": "Average",
         "region": "eu-west-1",
         "title": "Gjennomsnittlig responstid for Checkout"
