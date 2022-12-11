@@ -9,6 +9,7 @@ on:
 
 jobs:
   terraform:
+    timeout-minutes: 2
     name: "Terraform"
     runs-on: ubuntu-latest
     env:
