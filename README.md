@@ -430,7 +430,7 @@ Konfigurer applikasjonen til å bruke ditt eget ClodWatch Metrics Namespace - di
 enhetstesten når dere starter å jobbe med denne oppgaven. I "virkeligheten" ville vi brukt et rammeverk som feks Mockito  
 til å "mocke" micrometer fra enhetstestene, men det er ikke ønskelig at dere skal bruke tid på dette under eksamen!
 
-### Oppgave 2 
+### Oppgave 2 - DONE
 
 Endre Javakoden slik at den rapporterer følgende Metrics til CloudWatch
 
@@ -468,7 +468,7 @@ noen gjør en push mot main branch.
 Fullfør workflow filen ```cloudwatch_dashboard.yml``` filen slik at apply bare bli kjørt på push mot main branch, og terraform plan   
 på når det lages en Pull request 
 
-### Oppgave 3
+### Oppgave 3 - DONE
 
 * Fullfør cloudwatch_dashboard.tf slik at koden lager et CloudWatch Dashboard med *fire widgets*. Disse skal vise metrikkene fra oppgave 2, Del 4. 
 * Antall handlekurver på et gitt tidspunkt i tid - verdien kan gå opp og ned ettersom kunder sjekker ut handlekurver og nye blir laget.
