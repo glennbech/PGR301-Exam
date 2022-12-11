@@ -8,6 +8,6 @@ terraform {
   backend "s3" {
     bucket = "onlinestore"
     key    = "1043/terraform-in-pipeline.state"
-    region = "eu-west-1"
+    region = "eu-east-1"
   }
 }

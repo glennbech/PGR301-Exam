@@ -37,6 +37,12 @@ I `docker.yml` skal man autentisere docker mot AWS ECR. For å få til dette, br
 * Under "Access keys for CLI, SDK, & API access" kan man velge å lage en access key.
 * Gå til Settings -> Secrets -> Actions i GitHub og legg til ID og secret KEY. Bruk navnene som står etter "secrets" i `docker.yml`.
 
+## Del 5
+
+### Oppgave 1
+
+`provider.tf` mangler backend "s3".
+
 </details>
 
 <details>
