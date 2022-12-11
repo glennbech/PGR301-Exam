@@ -19,7 +19,45 @@ resource "aws_cloudwatch_dashboard" "main" {
         "period": 60,
         "stat": "Maximum",
         "region": "eu-west-1",
-        "title": "Total number of carts"
+        "title": "Antall handlekurver"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 13,
+      "y": 0,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "metrics": [
+          [
+            "${var.candidate_id}",
+            "cartsvalue.value"
+          ]
+        ],
+        "period": 60,
+        "stat": "Maximum",
+        "region": "eu-west-1",
+        "title": "Total sum med penger i handlekurver"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 7,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "metrics": [
+          [
+            "${var.candidate_id}",
+            "checkouts.count"
+          ]
+        ],
+        "period": 60,
+        "stat": "Maximum",
+        "region": "eu-west-1",
+        "title": "Totalt antall handlevogner sjekket ut"
       }
     }
   ]
