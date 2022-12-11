@@ -70,15 +70,15 @@ resource "aws_cloudwatch_dashboard" "main" {
         "metrics": [
           [
             "${var.candidate_id}",
-            "checkout_latency.avg"
+            "checkout_latency.avg",
+            "exception", "none",
+            "method", "checkout",
+            "class", "no.shoppifly.ShoppingCartController"
           ]
         ],
         "period": 60,
         "stat": "Average",
         "region": "eu-west-1",
-        "exception": "none",
-        "method": "checkout",
-        "class": "no.shoppifly.ShoppingCartController",
         "title": "Gjennomsnittlig responstid for Checkout"
       }
     }
