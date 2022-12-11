@@ -6,7 +6,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "onlinestore"
+    bucket = "pgr301-1043-terraform"
     key    = "1043/terraform-in-pipeline.state"
     region = "eu-west-1"
   }
