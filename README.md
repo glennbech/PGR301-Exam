@@ -1,5 +1,7 @@
 # DevOps med gode intensjoner
 
+<em>Eksamensoppgaven er gitt på GitHub repository ; https://github.com/PGR301-2022/eksamen_2022</em>
+
 ## Del 1
 
 ### Utfordringer med Shopifly
