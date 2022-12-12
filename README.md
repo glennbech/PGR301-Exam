@@ -6,8 +6,49 @@
 ## Del 1
 
 ### Utfordringer med Shopifly
-Dagens systemutviklingsprosess har flere utfordringer som fører til brudd på DevOps prinsipper som *flow* vet å
-ha manuelle steg. 
+Dagens systemutviklingsprosess har flere utfordringer som fører til brudd på DevOps prinsipper som *flow* og *feedback* vet å
+ha manuelle steg, uferdige prosjekter, og ingen branch protection. 
+
+Det er flere steder i koden man kan finne prosjekter som er påbegynt, men
+som har blitt forlatt på grunn av vansklighetsgrad. Dette sørger for at man har flere prosjekter samtidig, og at man bryter
+*Limit work in process (WIP)*. Dette fører til at utvikleren må endre kontekst mellom prosjekter og bruke tid på å sette seg inn i det
+igjen.
+
+Etter som at selskapet har ansatt testere som må gå gjennom og godkjenne alle leveranser, skaper dette flere *handoffs* enn nødvendig.
+Dette kan føre til mer arbeid som blir puttet på vent, og det tar lenger tid før produktet er ute i produksjon. Et annet problem er at
+konteksten prosjektet hadde kan bli endret om det er for mange handoffs.
+
+Man kan gjøre pull requests til main uten noen sjekker. Ingen tester eller godkjenning av kode før merge. Dette fører til lite *feedback*
+noe som er et viktig prinsipp i DevOps. Det å jobbe trygt i et komplekst system, og være sikker på at errorer blir oppdaget lenge før
+de skaper katastrofer er essensielt.
+
+### Problemet med mindre hyppig, mer kontrollert og QA funksjonaliteter
+Som nevnt tidligere skaper det flere handoffs om en kode går fra en person til en annen. Dette fører til tregere utvikling, og
+resultatet kan ende opp som noe annet. Det å holde på kode over lenger tid før release kan også skape flere utfordringer for
+utvikleren. Motivasjonen er ikke like høy når man må sitte med samme problem i flere uker, og etter hvert sitter man kanskje med
+flere prosjekter samtidig, som fører til mindre oversikt og overskudd.
+
+Det er viktig å oppdage problemer under veis i utviklingen slik at man ikke møter på alle ved release. Derfor er feedback og
+feedforward loops viktig å implementere slik at man finner veilen umiddelbart og kan handle. Dette vil føre til at det er mindre feil
+under release av ny funksjonalitet.
+
+### Gevinster ved DevOps
+Når et team overleverer kode til et annet er det største problemet feilkommunikasjon og forvirring, samt tidsforbruk. Et nytt team
+er nødt til å sette seg inn i det noen andre har sittet og laget. Dette fører til flere timer med unødvendig arbeid, før man
+faktisk kan begynne å gjøre noe fornuftig. I tillegg kan man mistolke og misforstå. Da fører man kanskje produktet i en annen retning
+enn det var ment. For å unngå slike problemer må utviklere også drive drift. På denne måten vet man nøyaktig hva koden gjør
+og man må ikke bruke noe mer tid på å sette seg inn i det. Dette vil skape mye bedre flyt i arbeidet og produktet blir ferdig fortere.
+
+### Hyppige leveranser
+En utfordring med å release kode ofte er at man får merge-konflikter, som innebærer at flere har kode som ikke spiller på lag. I tillegg
+kan man ha skrevet to forskjellige logikker som gjør at produktet ikke fungerer når disse settes sammen. En annen utfordring er at
+koden man har skrevet ikke er testet før push og når den skal tas i bruk i produksjon, er det bugs og feil.
+Her kommer Continuous Integration (CI) og Continuous Delivery (CD) inn.
+CI sørger for continuous testing slik at det blir raskere bug-fiksing, bedre sammarbeid, og kodekvalitet.
+CD sørger for at det nye produktet blir automatisk testet og sendt tilbake om det er nødvedige bug-fikser. Deretter er den automatisk
+retestet og pushet. Så kan man release til produksjonsmiljøet. CD sørger altså for at koden som blir sendt til produksjon er
+bug-free, effektiv, fungerende og pålitelig.
+
 
 ## Del 2
 
